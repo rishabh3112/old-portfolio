@@ -24,12 +24,14 @@ $(".btn").click(function(){
     $('html, body').animate({
         scrollTop: $(".btn").offset().top
     }, 2000);
+    $(".cards").css("overflow","auto");
     $(".btn").html('<i class="fa fa-angle-up" aria-hidden="true"></i>');
     $(".btn").addClass("goup");
     b=1;
   }
   else{
     $(".cards").css("height","0px");
+    $(".cards").css("overflow","hidden");
     $(".btn").html('<i class="fa fa-angle-down" aria-hidden="true"></i>');
     $(".btn").removeClass("goup");
     b=0;
