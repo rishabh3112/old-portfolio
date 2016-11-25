@@ -1,131 +1,89 @@
-/* fonts */
-@import 'https://fonts.googleapis.com/css?family=Lobster';
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+.parallax > use {
+  animation: move-forever 12s linear infinite;
+}
 
-/* Main */
-body{
-  margin: 0;
-  padding: 0px;
-  background: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/08/design-Wallpapers-1-1024x640.jpg") fixed center center /cover;
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
 }
-.container{
-  width: 100;
-  overflow-x: hidden;
-  padding: 10vw;
-  padding-top: 10px;
-  margin-top: -60px;
+
+.parallax > use:nth-child(2) {
+  animation-delay: -2s;
+  animation-duration: 5s;
 }
-/* Text */
-.text {
-  border: 2px solid steelblue;
-  font-family: 'Lobster', cursive;
-  font-size: 45px;
-  position: relative;
-  padding-top: 50px;
-  color: white;
-  background: steelblue;
-  transform: translate(0% , 0%);
-  text-align: center;
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 3s;
 }
-.img{
-  width: 100px;
-  height: 100px;
-  display: block;
-  position: relative;
-  top: 50px;
-  z-index: 9999;
-  border: 4px solid steelblue;
-  border-radius: 50%;
-  margin: auto;
-  background: url("https://avatars.githubusercontent.com/u/15812317?v=3") no-repeat center center /cover;
-  -webkit-transition: linear 1s; 
-  transition: linear 1s;
-  font-size: 50px;
-  color: steelblue;
-  
+
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
 }
-.arrow{
-  height: 0px;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  border-bottom: 5px solid #aaf;
-  border-top: 5px solid steelblue;
-}
-article{
-  font-family: 'Roboto', sans-serif;
-}
-.cards{
-  padding: 5px;
-  border: 3px solid #aaf;
-  background: #aaf;
-  height: 0px;
+
+.card-image {
+  height: 200px;
   overflow: hidden;
-  padding-bottom: 10px;
-  transition: ease-in 1s;
 }
-.card{
-  padding: 20px;
-  background: white;
-  margin-top: 10px;
+
+.card-image img{
+  margin-top: -50px;
 }
-.white{
+
+.editorial {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 30vh;
+}
+
+#headcont {
+  display: block;
+  position: absolute;
+  top: 30vh;
+  padding-left: 3vw;
+}
+
+#headcont h1 {
   color: white;
-}
-.banner{
-  position: relative;
-  height: 200px;
-  top: 108px;
-  z-index: 1;
-  background: url("http://www.topofandroid.com/wp-content/uploads/2015/05/Android-L-Material-Design-Wallpapers-5.png") center bottom;
-}
-.icon{
-  position: relative;
-  width: 200px;
-  max-width: 200px;
-  height: 200px;
-  background: gold;
-  top: 50px;
-  text-align: center;
-  border-radius: 50%;
-  -webkit-transition: linear 1s; 
-  transition: linear 1s;
-  line-height: 100px;
-}
-a{
-  color: steelblue;
+  font-size: 10vw;
+  font-family: 'Raleway', sans-serif;
 }
 
-.btn{
-  width: 50px;
-  height: 50px;
-  position: relative;
-  line-height: 80px;
-  font-size: 30px;
-  top: -40px;
-  background: gold;
-  border-radius: 25px;
-  box-shadow: 0px 0px 10px #aaa;
-  animation: godown 1s ease-in-out infinite;
-}
-
-.goup{
-  animation: goup 1s ease-in-out infinite;
-}
-
-@keyframes godown{
-  from{line-height: 50px;}
-  to{color: transparent;}
-}
-@keyframes goup{
-  from{line-height: 50px;}
-  to{line-height: 20px; color: transparent;}
-}
-.small{
-  position: relative;
-  line-height: 1px;
-  top:-50px;
+small {
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  margin-left: 5px;
 }
 
+#headcont h1::after {
+  content: " ";
+  display: block;
+  width: 85vw;
+  background: url("https://media.giphy.com/media/3bMuV8UuO5L4k/giphy.gif");
+  height: 6px;
+}
 
+.main {
+  position: relative;
+  padding-top: 5vh;
+  background: #ccc;
+}
+
+.back {
+  display: block;
+  height: 100vh;
+}
+
+#loader {
+  display: block;
+  margin: 45vh auto;
+}
+
+#body {
+  display: none;
+}

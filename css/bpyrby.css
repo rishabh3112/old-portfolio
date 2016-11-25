@@ -1,0 +1,15 @@
+body{
+  animation: back 30s infinite ease-in;
+}
+@keyframes back{
+  0%{
+    background:  steelblue;
+  }
+  50%{
+    background: gold;
+  }
+  100%{
+    background: steelblue;
+  }
+ 
+}
