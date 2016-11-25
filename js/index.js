@@ -1,5 +1,5 @@
 function myFunction() {
-  myVar = setTimeout(showPage, 1000);
+  myVar = setTimeout(showPage, 1500);
   console.log('apple');
 }
 
