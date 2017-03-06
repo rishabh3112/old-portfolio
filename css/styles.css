@@ -1,0 +1,48 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Quicksand', sans-serif;
+	background-color: #444468
+}
+#draw{
+	overflow: hidden;
+	background: #444498;
+}
+
+.btn-floating{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5vh;
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.row{
+	margin-top: 25vh;
+	padding-top: 5vh;
+}
+
+#content{
+	position: absolute;
+	width: calc(100% - 20px);
+	top: 40vh;
+	left: 10px;
+	margin-right: 10px;
+	color: white;
+}
+
+#content h1{
+	display: block;
+	position: relative;
+	right: 10px;
+	font-family: 'Pacifico', cursive;
+	text-align: right;
+}
+
+.page-footer{
+	margin: 0px;
+	padding-top: 0px !important;
+}
