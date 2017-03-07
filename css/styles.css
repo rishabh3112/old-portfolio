@@ -7,17 +7,28 @@ body{
 #draw{
 	overflow: hidden;
 	background: #444498;
+	position: fixed
 }
 
-.btn-floating{
+.buttons{
+	display: block;
+	position:absolute;
+	right: 10px;
+}
+
+.down{
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 5vh;
+	margin-top: calc(-5vh - 30px);
 }
-
 .card-image {
   height: 200px;
   overflow: hidden;
+}
+
+.card-image img{
+  margin-top: -50px;
 }
 
 .row{
