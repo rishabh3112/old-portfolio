@@ -6,7 +6,7 @@ body{
 }
 #draw{
 	overflow: hidden;
-	background: url("../assets/rishabh.png") top center #444498;
+	background: url("../assets/wally.png") top center #444498;
 	background-repeat: no-repeat;
 	position: fixed
 }
