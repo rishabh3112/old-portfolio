@@ -1,3 +1,49 @@
+$banner-height: 200px;
+@import "@material/button/mdc-button";
+@import "@material/typography/mdc-typography";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/card/mdc-card";
+@import "@material/shape/mixins";
 body{
-    background: #232323;
+    @include mdc-typography-base;
+    background: #f5f5f5;
+    margin: 0;
+}
+main{
+    margin: 5px;
+    margin-top: -10px;
+
+    @media (min-width: 800px){
+        width: 600px;
+        margin: 0 auto;
+        margin-top: -10px;
+    }
+}
+
+.mdc-card{
+    margin-bottom: 20px;
+    .content{
+        margin-left: 5px;
+        text-align: center;
+        .divider{
+            border-top: solid 2px $mdc-theme-secondary;
+            width: 50px;
+            margin: 0 auto;
+        }
+    }
+    .last-updated{
+        display: block;
+        color: #757575;
+    }
+}
+
+#banner{
+    background-color: $mdc-theme-primary;
+    width: 100%;
+    height: $banner-height;
+    margin: 0;
+    margin-top: 52px;
+    padding-top: $banner-height*0.3;
+    text-align: center;
+    color: white;
 }
