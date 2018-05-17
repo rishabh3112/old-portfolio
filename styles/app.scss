@@ -1,18 +1,57 @@
-$banner-height: 250px;
+$banner-height: 200px;
+$mdc-theme-secondary: #ffb300;
 @import "@material/button/mdc-button";
 @import "@material/typography/mdc-typography";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/card/mdc-card";
+@import "@material/shape/mdc-shape";
 @import "@material/shape/mixins";
 @import "@material/image-list/mdc-image-list";
 @import "@material/animation/variables";
+@import "@material/list/mdc-list";
+@import "@material/chips/mdc-chips";
+
+.button-group{
+    margin-bottom: 10px;
+}
+.mdc-card__action--button{
+    border-radius: 20px;
+    text-transform: capitalize; 
+}
+.mdc-chip-set{
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid $mdc-theme-secondary;
+    border-radius: 10px 0 10px 0;
+    margin-bottom: 10px;
+}
+.my-card__media{
+    height: 200px;
+    background-image: url("https://wallpapertag.com/wallpaper/full/d/b/4/129469-new-google-pixel-wallpaper-2689x1800-windows-7.jpg");
+}
+.mdc-chip{
+    @include mdc-states-base-color($mdc-theme-primary);
+    background-color: $mdc-theme-secondary;
+    color: white;
+    &:hover{
+        color: white;
+    }
+}
 
 body{
     @include mdc-typography-base;
     background: #f5f5f5;
     margin: 0;
+    overflow-x: hidden;
 }
 
+.main-container {
+    
+
+    @media (min-width: 900px){
+        @include mdc-shape-angled-corner($mdc-theme-primary, 100px);
+    }
+}
 .my-image-list {
     @include mdc-image-list-masonry-columns(2);
     width: 90%;
@@ -43,13 +82,16 @@ body{
   }
 
 main{
+    width: 100vw;
+}
+.main-content{
+    z-index: 1;
     margin: 5px;
-    margin-top: -30px;
 
     @media (min-width: 900px){
         width: 800px;
         margin: 0 auto;
-        margin-top: -10px;
+        margin-top: 50px;
     }
 }
 
@@ -63,7 +105,7 @@ main{
         }
         .divider{
             border-top: solid 2px $mdc-theme-secondary;
-            width: 50px;
+            width: 100px;
             margin: 0 auto;
         }
     }
@@ -73,14 +115,45 @@ main{
     }
 }
 
-
 #banner{
-    background-color: $mdc-theme-primary;
+    background: $mdc-theme-primary url("https://avatars2.githubusercontent.com/u/15812317?s=460&v=4");
+    background-position: bottom right;
+    background-position-y: ($banner-height/3);
+    background-size: $banner-height*1.2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 100%;
     height: $banner-height;
     margin: 0;
-    margin-top: 52px;
-    padding-top: $banner-height*0.3;
+    margin-top: 0px;
+    padding-top: $banner-height*0.2;
     text-align: center;
     color: white;
+    z-index: 0;
+    p{
+        @media (max-width: 760px) {
+            background: $mdc-theme-primary;
+            padding: 3px;
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    background: $mdc-theme-primary;
+    color: white;
+    padding-top: $banner-height*0.2;
+    text-align: center;
+    margin-top: 50px;
+    height: $banner-height*0.5;
+    &:before{
+        content: "";
+        position: relative;
+        top: -1*$banner-height*0.2;
+        border-bottom: 50px solid $mdc-theme-primary;
+        border-right: 50px solid $mdc-theme-primary;
+        border-left: 50px solid #f5f5f5;
+        border-top: 50px solid #f5f5f5;
+        box-shadow: 0 5px -2px 5px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
 }

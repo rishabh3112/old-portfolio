@@ -17,7 +17,9 @@
     "dependencies": {
         "@material/button": "^0.35.0",
         "@material/card": "^0.35.0",
+        "@material/chips": "^0.35.1",
         "@material/image-list": "^0.35.0",
+        "@material/list": "^0.35.0",
         "@material/shape": "^0.35.0",
         "@material/top-app-bar": "^0.35.1"
     }

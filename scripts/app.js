@@ -3,6 +3,15 @@ import {MDCTopAppBar} from '@material/top-app-bar/index';
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
+document.querySelectorAll(".mdc-button").forEach(el => {
+    new MDCRipple(el);
+});
+
+document.querySelectorAll(".mdc-chip").forEach(el => {
+    new MDCRipple(el);
+});
+
+
 
 window.sr = ScrollReveal();
 sr.reveal(".mdc-card",{
