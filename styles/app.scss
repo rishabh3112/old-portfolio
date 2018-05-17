@@ -1,20 +1,53 @@
-$banner-height: 200px;
+$banner-height: 250px;
 @import "@material/button/mdc-button";
 @import "@material/typography/mdc-typography";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/card/mdc-card";
 @import "@material/shape/mixins";
+@import "@material/image-list/mdc-image-list";
+@import "@material/animation/variables";
+
 body{
     @include mdc-typography-base;
     background: #f5f5f5;
     margin: 0;
 }
+
+.my-image-list {
+    @include mdc-image-list-masonry-columns(2);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: auto;
+    img{
+        border-radius: 5px;
+    }
+    li{
+        &:hover{
+            animation: scale 100ms $mdc-animation-standard-curve-timing-function;
+            animation-iteration-count: 1;
+        }
+    }
+  }
+
+  @keyframes scale {
+      0%{
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(1.05);
+      }
+      100%{
+        transform: scale(1);
+      }
+  }
+
 main{
     margin: 5px;
-    margin-top: -10px;
+    margin-top: -30px;
 
-    @media (min-width: 800px){
-        width: 600px;
+    @media (min-width: 900px){
+        width: 800px;
         margin: 0 auto;
         margin-top: -10px;
     }
@@ -25,6 +58,9 @@ main{
     .content{
         margin-left: 5px;
         text-align: center;
+        h1{
+            font-family: 'Roboto Mono', monospace;
+        }
         .divider{
             border-top: solid 2px $mdc-theme-secondary;
             width: 50px;
@@ -36,6 +72,7 @@ main{
         color: #757575;
     }
 }
+
 
 #banner{
     background-color: $mdc-theme-primary;
