@@ -8,8 +8,10 @@ $mdc-theme-secondary: #ffb300;
 @import "@material/shape/mixins";
 @import "@material/image-list/mdc-image-list";
 @import "@material/animation/variables";
+@import "@material/animation/functions";
 @import "@material/list/mdc-list";
 @import "@material/chips/mdc-chips";
+@import "@material/drawer/mdc-drawer";
 
 .button-group{
     margin-bottom: 10px;
@@ -17,6 +19,11 @@ $mdc-theme-secondary: #ffb300;
 .mdc-card__action--button{
     border-radius: 20px;
     text-transform: capitalize; 
+}
+.mdc-drawer__header{
+    background: $mdc-theme-secondary;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 .mdc-chip-set{
     width: 60%;
@@ -135,6 +142,43 @@ main{
             background: $mdc-theme-primary;
             padding: 3px;
         }
+    }
+    h1{
+        font-family: 'Roboto Mono', monospace;
+    }
+}
+
+#left-angle{
+    display: inline-block;
+    animation: mdc-animation-enter(left-ang , 1s);
+    opacity: 1;
+}
+
+#right-angle{
+    display: inline-block;
+    animation: mdc-animation-enter(right-ang , 1s);
+    opacity: 1;
+}
+
+@keyframes left-ang {
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes right-ang {
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
     }
 }
 

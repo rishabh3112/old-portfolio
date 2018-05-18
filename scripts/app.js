@@ -1,5 +1,13 @@
 import {MDCRipple} from "@material/ripple";
 import {MDCTopAppBar} from '@material/top-app-bar/index';
+import {MDCTemporaryDrawer} from '@material/drawer';
+
+const drawer = new MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
+document.querySelector('.menu').addEventListener('click', () => drawer.open = true);
+
+document.querySelectorAll('.dr-link').forEach(item => {
+    item.addEventListener('click' , () => drawer.open = false);
+});
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
