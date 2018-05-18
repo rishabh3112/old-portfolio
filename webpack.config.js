@@ -12,10 +12,15 @@ module.exports = [{
             loader: 'file-loader',
             options: {
               name: 'bundle.css',
+              //outputPath: './dist',  // uncomment when building
             },
           },
           { loader: 'extract-loader' },
-          { loader: 'css-loader' },
+          { 
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+            } },
           {
             loader: 'sass-loader',
             options: {
@@ -31,7 +36,7 @@ module.exports.push({
     entry: "./scripts/app.js",
     output: {
       filename: "bundle.js",
-      path: path.resolve(__dirname, 'dist')
+      // path: path.resolve(__dirname, 'dist') //uncomment while building
     },
     module: {
       loaders: [{
