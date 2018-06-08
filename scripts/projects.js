@@ -17,7 +17,7 @@ projects.forEach(project => {
                     + "<p class='mdc-typography--body1'>"+project.description+"</p>"
                     + '<div class="mdc-card__actions">'
                     + '<div class="mdc-card__action-buttons">'
-                    + '<a href="' + project.projectURL + '" class="mdc-button mdc-card__action mdc-card__action--button mdc-button--outlined">'
+                    + '<a href="' + project.projectURL + '" class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised">'
                     + 'Project Link </a>'
                     + '</div>'
                     + '</div>'

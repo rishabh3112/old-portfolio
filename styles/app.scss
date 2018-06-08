@@ -17,8 +17,7 @@ $mdc-theme-secondary: #ffb300;
     margin-bottom: 10px;
 }
 .mdc-card__action--button{
-    border-radius: 20px;
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 .mdc-drawer__header{
     background: $mdc-theme-secondary;
@@ -26,7 +25,7 @@ $mdc-theme-secondary: #ffb300;
     font-family: 'Roboto Mono', monospace;
 }
 .mdc-chip-set{
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     border: 1px solid $mdc-theme-secondary;
     border-radius: 10px 0 10px 0;
@@ -124,6 +123,12 @@ main{
         display: block;
         color: #757575;
     }
+    
+    .mdc-card__actions{
+        display: block;
+        margin: 0 auto;
+    }
+    
 }
 
 #banner{
@@ -208,18 +213,23 @@ footer{
 
 .project-card{
     text-align: center;
-    h1{
+    border: solid 5px $mdc-theme-secondary;
+    box-shadow: 0 0 0 0;
+    h1,h4{
         font-family: 'Roboto Mono', monospace;
+    }
+    h4{
+        font-weight: 100;
     }
     &:before{
         content: "";
         position: relative;
         width: 5px;
-        top: -20px;
+        top: -25px;
         background: $mdc-theme-secondary;
         height: 20px;
         margin: 0 auto;
         
     }
-    
+
 }
