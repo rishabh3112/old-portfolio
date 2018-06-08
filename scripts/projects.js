@@ -4,7 +4,7 @@ var projects = [
         'projectURL': "https://github.com/rishabh3112/airbook",
         'imageName': "airbook.PNG",
         'description': "Computer Science project under Class 12 CBSE Curricullum"
-    }
+    },
 ];
 
 const projectsNode = document.querySelector('#projectsContainer');
