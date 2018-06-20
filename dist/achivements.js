@@ -20,19 +20,12 @@ var achievements = [
         "certificateURL": "assets/pdfs/cbse_board.pdf",
         "description": "Senior Secondary class 12th examinations conducted by CBSE. <br>"
                      + " Secrured <b> 94.6% </b> marks and was <b>School Topper</b> in science stream"
-    },
-    {
-        "name" : "JEE Advanced 2018",
-        "organisation" : "IIT kanpur",
-        "certificateURL" : null,
-        "description" : "Cleared JEE Advanced annually conducted by IITs. <br>Considered to be one of the most tough examination all over the world."
     }
 ];
 
 const achievementsNode = document.querySelector('#achievementsContainer');
 achievements.forEach(achievement => {
-    if(achievement.certificateURL){
-        var achievementHTML = "<div class='mdc-card project-card'>"
+    var achievementHTML = "<div class='mdc-card project-card'>"
                         + "<h1 class='project-name'>"+achievement.name+"</h1>"
                         + "<i><h4>"+achievement.organisation+"</h4></i>"
                         + "<p class='mdc-typography--body1'>"+achievement.description+"</p>"
@@ -43,14 +36,6 @@ achievements.forEach(achievement => {
                         + '</div>'
                         + '</div>'
                         + '</div>';
-    }
-    else{
-        var achievementHTML = "<div class='mdc-card project-card'>"
-                        + "<h1 class='project-name'>"+achievement.name+"</h1>"
-                        + "<i><h4>"+achievement.organisation+"</h4></i>"
-                        + "<p class='mdc-typography--body1'>"+achievement.description+"</p>"
-                        + '</div>';
-    }
     
     achievementsNode.innerHTML += achievementHTML;
 });
