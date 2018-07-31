@@ -1542,9 +1542,19 @@ var topAppBar = new _index.MDCTopAppBar(topAppBarElement);
 document.querySelectorAll(".mdc-button").forEach(function (el) {
     new _ripple.MDCRipple(el);
 });
-
+document.querySelectorAll(".mdc-fab").forEach(function (el) {
+    new _ripple.MDCRipple(el);
+});
 document.querySelectorAll(".mdc-chip").forEach(function (el) {
     new _ripple.MDCRipple(el);
+});
+
+document.addEventListener('scroll', function (event) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector('#btop').style.display = "block";
+    } else {
+        document.querySelector('#btop').style.display = "none";
+    }
 });
 
 window.sr = ScrollReveal();

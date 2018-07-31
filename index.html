@@ -57,7 +57,9 @@
                     <div class="divider"></div>
                     <p class="mdc-typography--body1">
                         I am <b>Rishabh Chawla</b> [ @rishabh3112 ]. 
-                        I am a Programmer and a Developer based in <b>Delhi, India</b>. Know more about me below 😊.
+                        I am a Programmer and a Developer based in <b>Delhi, India</b>.<br>
+                        Currently in <b>B.Tech. IT, first year</b> at <b>Delhi Technological University</b>.<br>
+                        Know more about me below 😊.
                         <div class="button-group">
                           <a class="mdc-button mdc-button--raised" href="https://github.com/rishabh3112">
                               Github
@@ -74,7 +76,7 @@
                           <a class="mdc-button mdc-button--raised" href="https://codepen.io/rishabh3112">
                             Codepen
                           </a>
-                          <a class="mdc-button mdc-button--raised" href="https:/rishabh3112.github.io/blog">
+                          <a class="mdc-button mdc-button--raised" href="https://rishabh3112.github.io/blog">
                             Blog
                           </a>
                         </div>
@@ -83,9 +85,9 @@
                 </div>
                     <div class="mdc-card__actions">
                       <div class="mdc-card__action-buttons">
-                        <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--outlined"><i class="material-icons">
-                          get_app
-                          </i> Resume</button>
+                        <a href="mailto:rishabh31121999@gmail.com?Subject=[Personal Web]%20Add%20Subject%20here" class="mdc-button mdc-card__action mdc-card__action--button mdc-button--outlined"><i class="material-icons">
+                          email
+                          </i>&#160;&#160;Email</a>
                       </div>
                     </div>
                   </div>
@@ -169,9 +171,18 @@
                   <div class="mdc-shape-container__corner mdc-shape-container__corner--top-left"></div>
     
     </div>
+    <button onclick="backToTop()" class="mdc-fab" id="btop">
+        <span class="mdc-fab__icon material-icons">keyboard_arrow_up</span>
+      </button>
     <footer>
-        <h1 class="mdc-typography--headline6"> <code>@rishabh3112 </code>(Rishabh Chawla)</h1>
+        <h1 class="mdc-typography--headline6"> Rishabh Chawla </h1>
     </footer>
+    <script>
+      function backToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="bundle.js" async></script>
     <script src="scripts/projects.js"></script>
