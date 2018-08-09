@@ -8,6 +8,11 @@ var achievements = [
                      + "and leads to fast development and fast web applications"
     },
     {
+        'name': 'Hackerrank C++ Gold Badge',
+        'organisation': 'Hackerrank',
+        'description': "A language proficiency being awarded by hackerrank on account of 250 points."
+    },
+    {
         'name': "JEE Mains",
         'organisation': "CBSE",
         'certificateURL': "assets/pdfs/jee_mains.pdf",
